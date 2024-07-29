@@ -1,0 +1,2 @@
+Bugfix => Az összes recept darklight mód hibás . 
+popup ablak készítése

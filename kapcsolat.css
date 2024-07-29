@@ -1,0 +1,44 @@
+.form {
+  margin: 5rem auto;
+  border: 1px solid black;
+  width: 25vw;
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px var(--shadow-color), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.form:hover {
+    transform: translateY(-0.5rem);
+}
+
+.form label,
+.form input[type="text"],
+.form textarea {
+  width: 50%;
+  margin: 0.2rem auto;
+  border-radius: 0.6rem;
+  padding: 0.2rem;
+}
+
+.form label {
+  text-align: center;
+}
+
+.submit-btn {
+  margin: 2rem auto 0 auto;
+  width: 25%;
+  padding: .5rem;
+  border-radius: .6rem;
+  background-color: var(--primary-color);
+}
+
+.footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}

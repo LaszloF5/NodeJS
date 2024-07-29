@@ -1,0 +1,27 @@
+main {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+p{
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.datalist-ul {
+    list-style-type: disc;
+    font-size: 2rem;
+}
+
+.datalist-ul li {
+    margin: 0.2rem 0;
+}
+
+.a-tag {
+    text-decoration: none;
+    color: blue;
+}
