@@ -21,4 +21,6 @@ fetch(api_url)
       .join("");
     document.querySelector(".js-root").innerHTML = Items;
   })
-  .catch((error) => "Error fetching data", error);
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });

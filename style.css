@@ -46,7 +46,7 @@ p {
 /* HEADER */
 
 .header {
-  height: 5vh;
+  height: 45px;
   background: var(--my-gradient);
   box-shadow: 0 2px 4px var(--shadow-color);
   position: fixed;
@@ -56,7 +56,7 @@ p {
 }
 
 .nav-ul {
-  height: 5vh;
+  height: 45px;
   display: flex;
   font-size: 2rem;
   justify-content: space-around;
@@ -89,12 +89,16 @@ p {
 /* MAIN */
 
 /* main {
-  height: 95vh;
+  height: 88vh;
 } */
 
 main h1 {
   text-align: center;
   margin: 6rem 0.5rem 1rem 0.5rem;
+}
+
+.hamburger-visible {
+  display: none;
 }
 
 /* JS-ben lévő html elemek stílusai */
@@ -164,9 +168,11 @@ main h1 {
 }
 
 .hide-list {
+  list-style-type: none;
   width: 140px;
   position: absolute;
-  background: var(--my-gradient);
+  top: 0;
+  background: var(--primary-color);
   padding: 1rem;
   border-radius: 0 0 1rem 1rem;
   height: 170px;
@@ -178,8 +184,7 @@ main h1 {
 .show {
   opacity: 1;
   visibility: visible;
-  top: 3.8vh;
-  left: 170px;
+  top: 4px;
 }
 
 .hide {
@@ -194,6 +199,12 @@ main h1 {
   display: none;
 }
 
+.toggle-img {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -202,7 +213,7 @@ main h1 {
 
 .footer,
 .footer-ul {
-  height: 7vh;
+  height: 65px;
 }
 
 .footer-ul {
@@ -230,6 +241,13 @@ main h1 {
   margin: 1rem 1.5rem;
 }
 
+/*Hamburger menu láthatósága*/
+
+.nav-ul.invisibleMenu {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {
@@ -243,19 +261,36 @@ main h1 {
 }
 
 @media (max-width: 768px) {
+  .hamburger-visible {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 7px;
+  }
+
   .tempdiv {
     display: flex;
     margin-left: 2rem;
     position: relative;
   }
 
+  .hide-list {
+    width: 200px;
+    left: -30px;
+    z-index: 10;
+  }
+
   .nav-ul {
     position: absolute;
+    top: 5vh;
     width: 200px;
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: var(--primary-color);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 }
 

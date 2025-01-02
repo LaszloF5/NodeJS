@@ -1,6 +1,13 @@
-import {getDarkOrLight, getToggleMenu} from './function.js';
+import {
+  getDarkOrLight,
+  getToggleMenu,
+  toggleHamburgerMenu,
+  resize,
+} from "./function.js";
 getDarkOrLight();
 getToggleMenu();
+toggleHamburgerMenu();
+resize();
 
 let api_url = "http://localhost:8000/api/etelek";
 
@@ -36,4 +43,4 @@ fetch(api_url)
     const errorContainer = document.querySelector(".js-daily-container");
     const errorMessage = `<p class="error-p">Error: ${error.message}</p>`;
     errorContainer.innerHTML = errorMessage;
-  });  
+  });

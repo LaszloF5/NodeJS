@@ -51,15 +51,49 @@ function getToggleMenu() {
   let toggle = document.querySelector(".js-receptek-toggle");
   let list = document.querySelector(".js-recipe-list");
 
+  // Menü megjelenítése és elrejtése kattintáskor
   toggle.addEventListener("click", function () {
     list.classList.toggle("hide");
     list.classList.toggle("show");
   });
 
+  // Menü automatikus elrejtése, amikor a kurzor elhagyja
   list.addEventListener("mouseleave", function () {
     list.classList.remove("show");
     list.classList.add("hide");
   });
+
+  // Menü láthatóvá tétele, ha a kurzor fölé kerül
+  list.addEventListener("mouseover", function () {
+    list.classList.remove("hide");
+    list.classList.add("show");
+  });
 }
 
-export { getDarkOrLight, getToggleMenu };
+
+function toggleHamburgerMenu() {
+  let visibleBox = document.querySelector(".js-mobile-view");
+  let hamburgerIcon = document.querySelector(".js-hamburger-icon");
+
+  hamburgerIcon.addEventListener("click", function () {
+    if (visibleBox.classList.contains("invisibleMenu")) {
+      visibleBox.classList.remove("invisibleMenu");
+    } else {
+      visibleBox.classList.add("invisibleMenu");
+    }
+  });
+}
+
+function resize() {
+  window.addEventListener("resize", function() {
+    const width = window.innerWidth;
+    if (width > 768) {
+      document.querySelector(".js-mobile-view").classList.remove("invisibleMenu");
+    } else {
+      document.querySelector(".js-mobile-view").classList.add("invisibleMenu");
+    }
+  })
+}
+
+
+export { getDarkOrLight, getToggleMenu, toggleHamburgerMenu, resize };

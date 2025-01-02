@@ -10,12 +10,12 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <img class="hamburger-visible small-img" src="../assets/hamburger-menu.png" alt="hamburger-menu-icon">
-        <ul class="nav-ul">
+        <img class="hamburger-visible small-img js-hamburger-icon" src="../assets/hamburger-menu.png" alt="hamburger-menu-icon">
+        <ul class="nav-ul js-mobile-view">
           <li class="nav-ul_li"><a href="./etelek.html">Főoldal</a></li>
          <div class="wrapper">
           <li class="nav-ul_li display-list js-receptek-toggle">Receptek</li>
-          <div class="hide hide-list js-recipe-list">
+          <ul class="hide hide-list js-recipe-list">
             <li class="nav-ul_li">
               <a href="./osszes_recept.html" target="_blank">Összes recept</a>
             </li>
@@ -36,14 +36,16 @@
             <li class="nav-ul_li">
               <a href="../HTML files/vacsorak.html" target="_blank">Vacsorák</a>
             </li>
-          </div>
+          </ul>
          </div>
          <li class="nav-ul_li"><a href="../HTML files/rólunk.html" target="_blank">Rólunk</a></li>
           <li class="nav-ul_li"><a href="../HTML files/kapcsolat.html" target="_blank">Kapcsolat</a></li>
-          <li class="darkAndLight js-darkAndLight"><img class="small-img js-moon-icon" src="../assets/moon.png" alt="dark-mode-icon">
-          <img class="small-img js-sun-icon hide-img" src="../assets/sun.png" alt="light-mode-icon"></li>
         </ul>
       </nav>
+      <ul class="toggle-img">
+        <li class="darkAndLight js-darkAndLight"><img class="small-img js-moon-icon" src="../assets/moon.png" alt="dark-mode-icon">
+          <img class="small-img js-sun-icon hide-img" src="../assets/sun.png" alt="light-mode-icon"></li>
+      </ul>
     </header>
     <main>
       <h1>Napi menü</h1>
